@@ -2,8 +2,15 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Productcard from "./Productcard";
-import { Product } from "@/pages/type";
 import Image from "next/image";
+
+interface Product{
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+}
+
 
 const Menuitem = () => {
   const [products, setProducts] = useState<Product[]>([]);

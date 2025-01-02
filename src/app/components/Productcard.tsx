@@ -1,6 +1,13 @@
-import { Product } from "@/pages/type";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+
+
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+}
 
 interface ProductCardProps extends Product {
   onAddToCart: (product: Product) => void;
